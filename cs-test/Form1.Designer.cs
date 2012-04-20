@@ -38,18 +38,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.bt_region = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_capture
             // 
-            this.bt_capture.Location = new System.Drawing.Point(211, 12);
+            this.bt_capture.Location = new System.Drawing.Point(211, 35);
             this.bt_capture.Name = "bt_capture";
-            this.bt_capture.Size = new System.Drawing.Size(61, 45);
+            this.bt_capture.Size = new System.Drawing.Size(61, 22);
             this.bt_capture.TabIndex = 0;
             this.bt_capture.Text = "Capture..!";
             this.bt_capture.UseVisualStyleBackColor = true;
-            this.bt_capture.Click += new System.EventHandler(this.button1_Click);
+            this.bt_capture.Click += new System.EventHandler(this.bt_capture_Click);
             // 
             // pictureBox1
             // 
@@ -126,11 +127,22 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Left";
             // 
+            // bt_region
+            // 
+            this.bt_region.Location = new System.Drawing.Point(211, 9);
+            this.bt_region.Name = "bt_region";
+            this.bt_region.Size = new System.Drawing.Size(61, 22);
+            this.bt_region.TabIndex = 7;
+            this.bt_region.Text = "Region";
+            this.bt_region.UseVisualStyleBackColor = true;
+            this.bt_region.Click += new System.EventHandler(this.bt_region_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 275);
+            this.Controls.Add(this.bt_region);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -143,7 +155,7 @@
             this.Controls.Add(this.bt_capture);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,14 +166,15 @@
 
         private System.Windows.Forms.Button bt_capture;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtb_right;
-        private System.Windows.Forms.TextBox txtb_top;
-        private System.Windows.Forms.TextBox txtb_bottom;
-        private System.Windows.Forms.TextBox txtb_left;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button bt_region;
+        public System.Windows.Forms.TextBox txtb_right;
+        public System.Windows.Forms.TextBox txtb_top;
+        public System.Windows.Forms.TextBox txtb_bottom;
+        public System.Windows.Forms.TextBox txtb_left;
 
 
 

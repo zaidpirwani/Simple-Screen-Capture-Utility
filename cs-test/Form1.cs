@@ -11,12 +11,15 @@ namespace cs_test
 {
     public partial class Form1 : Form
     {
+        Point p1 = new Point();
+        Point p2 = new Point();
         public Form1()
         {
             InitializeComponent();
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bt_capture_Click(object sender, EventArgs e)
         {
             int img_top     = Convert.ToInt16(txtb_top.Text);
             int img_bottom  = Convert.ToInt16(txtb_bottom.Text);
@@ -31,5 +34,42 @@ namespace cs_test
             }
             pictureBox1.Image = capture;
         }
+
+        private void bt_region_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.Opacity = 0.25D;
+            bt_capture.Visible = false;
+            bt_region.Visible = false;
+            pictureBox1.Visible = false;
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                p1 = p2;
+                p2 = MousePosition;
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+                this.Visible = false;
+                Bitmap capture = new Bitmap( Math.Abs(p2.X-p1.X), Math.Abs(p2.Y-p1.Y));
+                Graphics scr = Graphics.FromImage(capture);
+                using (Graphics gr = Graphics.FromImage(capture))
+                {
+                    gr.CopyFromScreen(new Point(p1.X, p1.Y), Point.Empty, new System.Drawing.Size(Math.Abs(p2.X-p1.X), Math.Abs(p2.Y-p1.Y)));
+                }
+                pictureBox1.Image = capture;
+                this.Opacity = 1.0D;
+                bt_capture.Visible = true;
+                bt_region.Visible = true;
+                pictureBox1.Visible = true;
+                this.Visible = true;
+            }
+
+
+        }
+
     }
 }
