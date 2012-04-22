@@ -7,3 +7,4 @@ E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debu
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs-test.exe
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs-test.pdb
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs_test.Form_2.resources

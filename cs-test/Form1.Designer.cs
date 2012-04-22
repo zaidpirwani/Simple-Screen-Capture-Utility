@@ -28,153 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bt_capture = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtb_right = new System.Windows.Forms.TextBox();
-            this.txtb_top = new System.Windows.Forms.TextBox();
-            this.txtb_bottom = new System.Windows.Forms.TextBox();
-            this.txtb_left = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bt_region = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // bt_capture
+            // button1
             // 
-            this.bt_capture.Location = new System.Drawing.Point(211, 35);
-            this.bt_capture.Name = "bt_capture";
-            this.bt_capture.Size = new System.Drawing.Size(61, 22);
-            this.bt_capture.TabIndex = 0;
-            this.bt_capture.Text = "Capture..!";
-            this.bt_capture.UseVisualStyleBackColor = true;
-            this.bt_capture.Click += new System.EventHandler(this.bt_capture_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(70, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 50);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "SAVE\r\nto\r\nDesktop";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // button3
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 200);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtb_right
-            // 
-            this.txtb_right.Location = new System.Drawing.Point(63, 35);
-            this.txtb_right.Name = "txtb_right";
-            this.txtb_right.Size = new System.Drawing.Size(40, 20);
-            this.txtb_right.TabIndex = 2;
-            // 
-            // txtb_top
-            // 
-            this.txtb_top.Location = new System.Drawing.Point(12, 35);
-            this.txtb_top.Name = "txtb_top";
-            this.txtb_top.Size = new System.Drawing.Size(40, 20);
-            this.txtb_top.TabIndex = 2;
-            // 
-            // txtb_bottom
-            // 
-            this.txtb_bottom.Location = new System.Drawing.Point(114, 35);
-            this.txtb_bottom.Name = "txtb_bottom";
-            this.txtb_bottom.Size = new System.Drawing.Size(40, 20);
-            this.txtb_bottom.TabIndex = 3;
-            // 
-            // txtb_left
-            // 
-            this.txtb_left.Location = new System.Drawing.Point(165, 35);
-            this.txtb_left.Name = "txtb_left";
-            this.txtb_left.Size = new System.Drawing.Size(40, 20);
-            this.txtb_left.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Top";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Right";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Bottom";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(173, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Left";
-            // 
-            // bt_region
-            // 
-            this.bt_region.Location = new System.Drawing.Point(211, 9);
-            this.bt_region.Name = "bt_region";
-            this.bt_region.Size = new System.Drawing.Size(61, 22);
-            this.bt_region.TabIndex = 7;
-            this.bt_region.Text = "Region";
-            this.bt_region.UseVisualStyleBackColor = true;
-            this.bt_region.Click += new System.EventHandler(this.bt_region_Click);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(12, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(52, 50);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Print\r\nScreen\r\nSysReq";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 275);
-            this.Controls.Add(this.bt_region);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtb_left);
-            this.Controls.Add(this.txtb_bottom);
-            this.Controls.Add(this.txtb_top);
-            this.Controls.Add(this.txtb_right);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.bt_capture);
+            this.ClientSize = new System.Drawing.Size(138, 65);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "YASCU";
+            this.TopMost = true;
+            this.TransparencyKey = System.Drawing.SystemColors.Window;
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button bt_capture;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button bt_region;
-        public System.Windows.Forms.TextBox txtb_right;
-        public System.Windows.Forms.TextBox txtb_top;
-        public System.Windows.Forms.TextBox txtb_bottom;
-        public System.Windows.Forms.TextBox txtb_left;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+
 
 
 

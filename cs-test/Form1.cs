@@ -13,63 +13,102 @@ namespace cs_test
     {
         Point p1 = new Point();
         Point p2 = new Point();
+        Boolean capture_mode = new Boolean();
+
         public Form1()
         {
             InitializeComponent();
-
-        }
-
-        private void bt_capture_Click(object sender, EventArgs e)
-        {
-            int img_top     = Convert.ToInt16(txtb_top.Text);
-            int img_bottom  = Convert.ToInt16(txtb_bottom.Text);
-            int img_left    = Convert.ToInt16(txtb_left.Text);
-            int img_right   = Convert.ToInt16(txtb_right.Text);
-
-            Bitmap capture = new Bitmap(img_right - img_left, img_bottom - img_top);
-            Graphics scr = Graphics.FromImage(capture);
-            using (Graphics gr = Graphics.FromImage(capture))
-            {
-                gr.CopyFromScreen(new Point(img_left, img_top), Point.Empty, new System.Drawing.Size(img_right - img_left, img_bottom - img_top));
-            }
-            pictureBox1.Image = capture;
-        }
-
-        private void bt_region_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.Opacity = 0.25D;
-            bt_capture.Visible = false;
-            bt_region.Visible = false;
-            pictureBox1.Visible = false;
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (capture_mode)
             {
-                p1 = p2;
-                p2 = MousePosition;
-            }
-            else if (e.Button == MouseButtons.Right)
-            {
-                this.Visible = false;
-                Bitmap capture = new Bitmap( Math.Abs(p2.X-p1.X), Math.Abs(p2.Y-p1.Y));
-                Graphics scr = Graphics.FromImage(capture);
-                using (Graphics gr = Graphics.FromImage(capture))
+                if (e.Button == MouseButtons.Left)
                 {
-                    gr.CopyFromScreen(new Point(p1.X, p1.Y), Point.Empty, new System.Drawing.Size(Math.Abs(p2.X-p1.X), Math.Abs(p2.Y-p1.Y)));
+                    p1 = p2;
+                    p2 = MousePosition;
                 }
-                pictureBox1.Image = capture;
-                this.Opacity = 1.0D;
-                bt_capture.Visible = true;
-                bt_region.Visible = true;
-                pictureBox1.Visible = true;
-                this.Visible = true;
+                else if (e.Button == MouseButtons.Right)
+                {
+                    // Ideal POINTS X1<X2 and Y1<Y2
+                    // testing for points and correcting
+                    if (p1.Equals(p2)) p1 = Point.Empty;
+                    if (p1.X == p2.X) p1.X--;
+                    if (p1.Y == p2.Y) p1.Y--;
+                    if (p1.X > p2.X)
+                    {
+
+                        int temp = 0;
+                        temp = p1.X;
+                        p1.X = p2.X;
+                        p2.X = temp;
+                    }
+                    if (p1.Y > p2.Y)
+                    {
+                        int temp = 0;
+                        temp = p1.Y;
+                        p1.Y = p2.Y;
+                        p2.Y = temp;
+                    }
+
+                    this.Visible = false;
+
+                    Point capt_size = new Point();
+                    capt_size.X = Math.Abs(p2.X - p1.X);
+                    capt_size.Y = Math.Abs(p2.Y - p1.Y);
+                    
+                    Bitmap capture = new Bitmap(capt_size.X, capt_size.Y);
+                    Graphics scr = Graphics.FromImage(capture);
+                    using (Graphics gr = Graphics.FromImage(capture))
+                    { gr.CopyFromScreen(new Point(p1.X, p1.Y), Point.Empty, new System.Drawing.Size(capt_size.X, capt_size.Y)); }
+
+                    Form_2 frm_prev = new Form_2();
+                    frm_prev.prev_image = capture;
+                    frm_prev.Width = capt_size.X;
+                    frm_prev.Height = capt_size.Y;
+                    frm_prev.ShowDialog();
+
+                    Clipboard.SetImage(capture);
+
+                    this.Opacity = 1.0D;
+                    this.Visible = true;
+                    this.WindowState = FormWindowState.Normal;
+                    
+                    /*
+                    pictureBox2.Image = capture;
+                    pictureBox2.Top = 0;
+                    pictureBox2.Left = 0;
+                    if (capt_size.X > 100) pictureBox2.Width = capt_size.X;
+                    else pictureBox2.Width = 100;
+                    if (capt_size.Y > 100) pictureBox2.Height = capt_size.Y;
+                    else pictureBox2.Height = 100;
+                    pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox2.Visible = true;
+                    */
+
+                    button1.Visible = true;
+                    button3.Visible = true;
+
+                    p1 = Point.Empty;
+                    p2 = p1;
+                    capture_mode = false;
+                }
             }
-
-
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.Opacity = 0.25D;
+            button1.Visible = false;
+            button3.Visible = false;
+            capture_mode = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sorry, not yet implemented\nThe image will be put on CLIPBOARD though to paste in WORD/Paint/etc");
+        }
     }
 }
