@@ -18,17 +18,36 @@ Planned Features [ESSENTIALS]:
 
 ChangeLog: [what has been DONE]
 
+========= 04 Commit =========
+-Added Capture Rectangle
+-Added Mouse Crosshairs in Capture Mode
+-Notification Area Icon+Menu added
+-Capture Region/Screen + Show App + Exit from Notification Area Menu
+-Hide to Notification Tray Button
+-Code cleaned - old commented code removed
+
+-HOW TO CAPTURE:
+--Click on Print Scree in App or select Capture Region from Tray Menu
+--Select a region by left-clicking and dragging
+--Region is highlighted by a rectangle
+--When correct area selected, Right Click to Capture
+--Preview Window is shows, the capture goes to CLIPBOARD for later use
+
+
 ========= 03 Commit =========
 Major work done, actually little work, but the app is actually looking useful now.
 -Removed Textboxes plus extra controls.
 -Application remains ON-TOP
 -Mouse based selection implemented
--click on two point, then right click to CAPTURE
--Capture image Previews, click to CLOSE Preview
--Capture image is Added to clipboard for copying
+HOW TO CAPTURE:
+--click on two point, then right click to CAPTURE
+--Capture image Previews, click to CLOSE Preview
+--Capture image is Added to clipboard for copying
+
 
 ========= 02 Commit =========
 Now capturing screen as I desire, rectangular co-ordinates needed to be entered into text boxes.
+
 
 ========= 01 Commit =========
 Copied, learned and verified working of simple screen Capture Code.
