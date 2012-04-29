@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("cs-test")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Simple Screen Capture Utility V.1.0 [BETA]")]
+[assembly: AssemblyDescription("a very Simple Screen Capture Utility")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("cs-test")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCompany("Ejaad")]
+[assembly: AssemblyProduct("Simple Screen Capture Utility")]
+[assembly: AssemblyCopyright("Copyright © Ejaad 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

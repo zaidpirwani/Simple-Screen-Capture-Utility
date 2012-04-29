@@ -1,10 +1,14 @@
-E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\bin\Debug\cs-test.exe
-E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\bin\Debug\cs-test.pdb
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs_test.Form1.resources
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs_test.Properties.Resources.resources
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\GenerateResource.write.1.tlog
-E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs-test.exe
-E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs-test.pdb
 E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\cs_test.Form_2.resources
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\Simple Screen Capture Utility.exe
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\Simple Screen Capture Utility.pdb
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\bin\Debug\Simple Screen Capture Utility.exe
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\bin\Debug\Simple Screen Capture Utility.pdb
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\bin\Debug\Simple Screen Capture Utility.exe.manifest
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\bin\Debug\Simple Screen Capture Utility.application
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\Simple Screen Capture Utility.exe.manifest
+E:\Dropbox\My Documents\Visual Studio 2010\Projects\cs-test\cs-test\obj\x86\Debug\Simple Screen Capture Utility.application
